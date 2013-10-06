@@ -5,7 +5,6 @@ class aptgetupdate {
   # errors.
   exec { 'apt-get update':
     command => '/usr/bin/apt-get update',
-    unless => "/usr/bin/test -d Plone"
   }
 
 }
