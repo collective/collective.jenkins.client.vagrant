@@ -1,11 +1,12 @@
 # If we reconfigure stuff it goes here
 
-class reconfigures {
+class reconfigure {
 
+    # LOCALE
     exec { 'dpkg-reconfigure locales':
         command => 'dpkg-reconfigure locales',
     }
 
 }
 
-include reconfigures
+include reconfigure
