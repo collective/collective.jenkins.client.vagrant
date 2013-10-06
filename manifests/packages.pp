@@ -67,7 +67,33 @@ class packages {
         ensure => present,
     }
 
-    #todo add nodejs and npm packages
+    # Code analysis
+    package {"nodejs":
+        ensure => present,
+    }
+
+    # Code analysis
+    package {"npm":
+        ensure => present,
+    }
+
+    # Code analysis
+    exec {"npm install -g jslint":
+        command => "npm install -g jslint",
+        require   => Package['npm'],
+    }
+
+    # Code analysis
+    exec {"npm install -g jshint":
+        command => "npm install -g jshint",
+        require   => Package['npm'],
+    }
+
+    # Code analysis
+    exec {"npm install -g csslint",
+        command => "npm install -g csslint",
+        require   => Package['npm'],
+    }
 
     # Robot Framework (This dependency is only necessary when
     # 'Library  Dialogs' are added to the robot setup, which shouldn't happen)
