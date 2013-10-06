@@ -78,20 +78,20 @@ class packages {
     }
 
     # Code analysis
-    exec {"npm install -g jslint":
-        command => "npm install -g jslint",
+    exec { 'npm install -g jslint':
+        command => 'npm install -g jslint',
         require   => Package['npm'],
     }
 
     # Code analysis
-    exec {"npm install -g jshint":
-        command => "npm install -g jshint",
+    exec { 'npm install -g jshint':
+        command => 'npm install -g jshint',
         require   => Package['npm'],
     }
 
     # Code analysis
-    exec {"npm install -g csslint",
-        command => "npm install -g csslint",
+    exec { 'npm install -g csslint',
+        command => 'npm install -g csslint',
         require   => Package['npm'],
     }
 
