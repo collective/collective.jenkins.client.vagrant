@@ -9,7 +9,7 @@ class packages {
 
     # Basics
     package {"htop":
-        ensure => present",
+        ensure => present,
     }
 
     # Time sync
