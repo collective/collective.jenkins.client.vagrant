@@ -90,7 +90,7 @@ class packages {
     }
 
     # Code analysis
-    exec { 'npm install -g csslint',
+    exec { 'npm install -g csslint':
         command => 'npm install -g csslint',
         require   => Package['npm'],
     }
