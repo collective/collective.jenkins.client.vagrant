@@ -14,4 +14,16 @@ Vagrant::Config.run do |config|
         puppet.manifest_file  = "aptgetupdate.pp"
     end
 
+    # Ensure we have the packages we need
+    config.vm.provision :puppet do |puppet|
+        puppet.manifests_path = "manifests"
+        puppet.manifest_file  = "packages.pp"
+    end
 
+    # Install all python versions we need
+    config.vm.provision :puppet do |puppet|
+        puppet.manifests_path = "manifests"
+        puppet.manifest_file  = "pythons.pp"
+    end
+
+end
