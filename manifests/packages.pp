@@ -97,7 +97,7 @@ class packages {
 
     # Robot Framework (This dependency is only necessary when
     # 'Library  Dialogs' are added to the robot setup, which shouldn't happen)
-    package {"python-tk:
+    package {"python-tk":
         ensure => present,
     }
 
