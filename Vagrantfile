@@ -26,4 +26,11 @@ Vagrant::Config.run do |config|
         puppet.manifest_file  = "pythons.pp"
     end
 
+    # Reconfigure lang settings and other stuff
+    # this manifest is for all reconfigure tasks
+    config.vm.provision :puppet do |puppet|
+        puppet.manifests_path = "manifests"
+        puppet.manifest_files = "reconfigure.pp"
+    end
+
 end
