@@ -30,7 +30,7 @@ Vagrant::Config.run do |config|
     # this manifest is for all reconfigure tasks
     config.vm.provision :puppet do |puppet|
         puppet.manifests_path = "manifests"
-        puppet.manifest_files = "reconfigure.pp"
+        puppet.manifest_files = "setup.pp"
     end
 
 end

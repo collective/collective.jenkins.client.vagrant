@@ -1,4 +1,4 @@
-# If we reconfigure stuff it goes here
+# Configs are going here
 
 class reconfigure {
 
