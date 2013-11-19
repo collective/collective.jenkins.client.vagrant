@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network :private_network, ip: "10.1.9.66"
+  #config.vm.network :private_network, ip: "10.1.9.66"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -42,8 +42,8 @@ Vagrant.configure("2") do |config|
   #   vb.gui = true
   #
   #   # Use VBoxManage to customize the VM. For example to change memory:
-   vb.customize ["modifyvm", :id, "--memory", "1024"]
-   vb.customize ["modifyvm", :id, "--name", "jenkins-client" ]
+   #vb.customize ["modifyvm", :id, "-- memory", "1024"]
+   vb.customize ["modifyvm", :id, "-- name", "jenkins-client" ]
 
   end
   #
@@ -52,7 +52,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :ansible do |ansible|
     ansible.playbook = "provisioning/playbook.yml"
-    ansible.inventory_file = "provisioning/hosts"
+    #ansible.inventory_file = "provisioning/hosts"
     ansible.verbose = false
   end
 
