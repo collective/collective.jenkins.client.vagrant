@@ -1,2 +1,5 @@
 ---
 # Playbook to deploy a Jenkins Client for the Plone Jenkins Master
+
+- hosts: all
+  tasks:
