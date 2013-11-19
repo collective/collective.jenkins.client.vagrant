@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
   #
   #   # Use VBoxManage to customize the VM. For example to change memory:
    #vb.customize ["modifyvm", :id, "-- memory", "1024"]
-   vb.customize ["modifyvm", :id, "-- name", "jenkins-client" ]
+   vb.customize ["modifyvm", :id, "--name", "jenkins-client" ]
 
   end
   #
@@ -53,7 +53,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :ansible do |ansible|
     ansible.playbook = "provisioning/playbook.yml"
     #ansible.inventory_file = "provisioning/hosts"
-    ansible.verbose = false
+    #ansible.verbose = false
   end
 
 
