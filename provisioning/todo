@@ -1,0 +1,8 @@
+Todo
+----
+npm install -g jslint
+npm install -g jshint
+npm install -g csslint
+
+# Remove zope.interface to avoid buildout problems
+apt-get remove -y python-zope.interface

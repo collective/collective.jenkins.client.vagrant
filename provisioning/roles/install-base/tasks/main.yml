@@ -1,0 +1,26 @@
+---
+# This role will install all base packages we need
+
+- name: Installing base packages
+  apt: name={{item}} state=present
+  with_items:
+    - htop
+    - build-essential
+    - ntp
+    - tmpreaper
+    - python-software-properties
+    - git-core
+    - subversion
+    - libxml2-utils
+    - wv
+    - poppler-utils
+    - libbz2-dev
+    - ohcount
+    - sloccount
+    - nodejs
+    - npm
+    - python-tk
+    - openjdk-7-jre
+    - libxslt1-dev
+    - libxml2-dev
+    - python-lxml
