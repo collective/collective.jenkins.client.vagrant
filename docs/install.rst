@@ -11,3 +11,4 @@ Dependencies
 
 - vagrant
 - ansible
+- git
