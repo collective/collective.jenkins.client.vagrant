@@ -1,0 +1,12 @@
+---
+# This role will install Python2.7, LXML and Pillow
+
+ -name: Installing Python2.7
+  apt: name={{item}} state=present
+  with_items:
+    - python2.7
+    - python2.7-dev
+    - python-lxml
+
+
+
