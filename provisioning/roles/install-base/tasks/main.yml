@@ -24,3 +24,6 @@
     - libxslt1-dev
     - libxml2-dev
     - python-lxml
+
+- name: Configure tmpreaper
+  template: src=tmpreaper.conf dest=/etc/tmpreaper/tmpreaper.conf
